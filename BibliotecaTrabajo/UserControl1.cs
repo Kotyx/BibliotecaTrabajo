@@ -34,23 +34,22 @@ namespace BibliotecaTrabajo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Random num1 = new Random();
-            Random num2 = new Random();
-            Random num3 = new Random();
+            Random num = new Random();
+            
 
-            label1.Text = num1.Next(1,10).ToString();
-            label2.Text = num2.Next(1, 10).ToString();
-            label3.Text = num3.Next(1, 10).ToString();
+            label1.Text = num.Next(1,10).ToString();
+            label2.Text = num.Next(1, 10).ToString();
+            label3.Text = num.Next(1, 10).ToString();
 
-            if(label1.Text == label2.Text || label1.Text == label3.Text || label2.Text == label3.Text)
-            {
-                MessageBox.Show("Dos Numeros son iguales", "Has ganado enhorabuena", MessageBoxButtons.OK);
+            if(label1.Text == label2.Text && label1.Text == label3.Text)
+            {   
+                MessageBox.Show("Tres Numeros son iguales", "Has hiperganado enhorabuena", MessageBoxButtons.OK);
             }
             else
             {
-                if(label1.Text == label2.Text && label1.Text == label3.Text)
+                if(label1.Text == label2.Text || label1.Text == label3.Text || label2.Text == label3.Text)
                 {
-                    MessageBox.Show("Tres Numeros son iguales", "Has hiperganado enhorabuena", MessageBoxButtons.OK);
+                    MessageBox.Show("Dos Numeros son iguales", "Has ganado enhorabuena", MessageBoxButtons.OK);
                 }
             }
         }
