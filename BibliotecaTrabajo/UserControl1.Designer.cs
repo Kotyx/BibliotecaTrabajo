@@ -111,5 +111,7 @@
         {
             return button1;
         }
+        [System.ComponentModel.Category("Comportamiento")]
+        public int propiedadNumero { get; set; }
     }
 }

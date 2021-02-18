@@ -32,10 +32,12 @@ namespace BibliotecaTrabajo
 
         }
 
+        
         private void button1_Click(object sender, EventArgs e)
         {
             Random num = new Random();
-            
+
+            propiedadNumero += 1;
 
             label1.Text = num.Next(1,10).ToString();
             label2.Text = num.Next(1, 10).ToString();
@@ -53,5 +55,7 @@ namespace BibliotecaTrabajo
                 }
             }
         }
+
+        public int Vecesjugadas() => propiedadNumero;
     }
 }
